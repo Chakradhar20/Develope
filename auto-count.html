@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Auto-Count</title>
+</head>
+<body>
+	<h1>0</h1>
+	<button>Click</button>
+<script type="text/javascript">
+	
+	document.addEventListener('DOMContentLoaded',function(){
+		let ele=document.querySelector('h1');
+		let doc=document.querySelector('button');
+		doc.addEventListener('click',count);
+		let c=0;
+	function count(){
+		c++;
+		ele.innerHTML=c;
+	}
+
+	setInterval(count,1000);
+
+
+	});
+</script>
+</body>
+</html>

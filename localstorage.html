@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Local Database</title>
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded',function(){
+		let number=document.querySelector('h1');
+		if(!localStorage.getItem('number')){
+			localStorage.setItem('number',0);
+		}
+		function count(){
+			let num=localStorage.getItem('number');
+			num++;
+			number.innerHTML=num;
+			localStorage.setItem('number',num);
+		}
+		number.innerHTML=localStorage.getItem('number');
+		document.querySelector('button').onclick=count;
+	});
+</script>
+</head>
+
+<body>
+	<h1></h1>
+	<button>Count</button>
+
+</body>
+</html>
