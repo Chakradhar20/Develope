@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search</title>
+</head>
+<body>
+	<form action="https://www.google.com/search" method="get">
+		<input autocomplete="off" name="q" autofocus placeholder="Type in here" type="search">
+		<button>Google Search</button>
+		<input type="password" id="pass">
+		<input type="checkbox" id="check"  onclick="cg()">
+		<input type="email" autocomplete="off" pattern=".+@.+\.ch">
+	</form>
+	<script type="text/javascript">
+		function cg() {
+		let dr=document.getElementById("pass");
+		dr.type="text";
+			// body...
+		}
+		
+
+	</script>
+
+</body>
+</html>
